@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF9188F72751CA5C002F3AEF /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9188F62751CA5C002F3AEF /* Book.swift */; };
+		AF9188FB2751D032002F3AEF /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9188FA2751D031002F3AEF /* Library.swift */; };
 		AFCFD6862751C8C100A784BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCFD6852751C8C100A784BC /* AppDelegate.swift */; };
 		AFCFD6882751C8C100A784BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCFD6872751C8C100A784BC /* SceneDelegate.swift */; };
 		AFCFD68A2751C8C100A784BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCFD6892751C8C100A784BC /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF9188F62751CA5C002F3AEF /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		AF9188FA2751D031002F3AEF /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		AFCFD6822751C8C100A784BC /* ReadMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCFD6852751C8C100A784BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFCFD6872751C8C100A784BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF9188FC2751D14D002F3AEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF9188FA2751D031002F3AEF /* Library.swift */,
+				AF9188F62751CA5C002F3AEF /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AFCFD6792751C8C100A784BC = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				AFCFD6852751C8C100A784BC /* AppDelegate.swift */,
+				AF9188FC2751D14D002F3AEF /* Model */,
 				AFCFD6872751C8C100A784BC /* SceneDelegate.swift */,
 				AFCFD6892751C8C100A784BC /* ViewController.swift */,
 				AFCFD68B2751C8C100A784BC /* Main.storyboard */,
@@ -138,7 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9188F72751CA5C002F3AEF /* Book.swift in Sources */,
 				AFCFD68A2751C8C100A784BC /* ViewController.swift in Sources */,
+				AF9188FB2751D032002F3AEF /* Library.swift in Sources */,
 				AFCFD6862751C8C100A784BC /* AppDelegate.swift in Sources */,
 				AFCFD6882751C8C100A784BC /* SceneDelegate.swift in Sources */,
 			);
