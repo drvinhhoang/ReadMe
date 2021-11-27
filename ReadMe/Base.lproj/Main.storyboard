@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Isb-Du-B3f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zf7-HO-tE9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LibraryVC-->
+        <!--My Library-->
         <scene sceneID="7FR-Oo-rGL">
             <objects>
                 <tableViewController id="Isb-Du-B3f" customClass="LibraryVC" customModule="ReadMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,6 +40,9 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="AxH-BA-2Gp" kind="show" identifier="ShowDetail" destinationCreationSelector="showDetailView:" id="Id1-0G-jff"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -47,21 +50,22 @@
                             <outlet property="delegate" destination="Isb-Du-B3f" id="0f3-Ba-tA7"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="My Library" id="Ie5-N6-Eiz"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMd-ub-iLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662" y="27"/>
+            <point key="canvasLocation" x="1571.0144927536232" y="26.785714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailVC-->
         <scene sceneID="QfG-gZ-Yym">
             <objects>
-                <viewController id="AxH-BA-2Gp" sceneMemberID="viewController">
+                <viewController id="AxH-BA-2Gp" customClass="DetailVC" customModule="ReadMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TwB-0v-iBC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="AnB-5k-ixS">
-                                <rect key="frame" x="103.5" y="289" width="207" height="328"/>
+                                <rect key="frame" x="103.5" y="311" width="207" height="328"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afa-wb-h0V">
                                         <rect key="frame" x="0.0" y="0.0" width="207" height="30"/>
@@ -92,10 +96,34 @@
                             <constraint firstItem="AnB-5k-ixS" firstAttribute="width" secondItem="LOb-fd-jfA" secondAttribute="width" multiplier="0.5" id="KiN-Ny-grY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="waX-IF-K55"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="lSP-tA-L2c" id="MZh-GG-1Gu"/>
+                        <outlet property="imageView" destination="lvo-O0-4EW" id="r7g-cO-86d"/>
+                        <outlet property="titleLabel" destination="Afa-wb-h0V" id="a9F-Yg-TIp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRt-QD-4df" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1378.2608695652175" y="26.785714285714285"/>
+            <point key="canvasLocation" x="2352" y="27"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vpn-AX-qaL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zf7-HO-tE9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ANE-22-pdw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Isb-Du-B3f" kind="relationship" relationship="rootViewController" id="cNW-T7-ZZE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ssy-e7-f7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660.86956521739137" y="26.785714285714285"/>
         </scene>
     </scenes>
     <resources>
