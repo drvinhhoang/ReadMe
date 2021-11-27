@@ -65,26 +65,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="AnB-5k-ixS">
-                                <rect key="frame" x="103.5" y="311" width="207" height="328"/>
+                                <rect key="frame" x="41.5" y="216.5" width="331" height="517"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afa-wb-h0V">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="30"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSP-tA-L2c">
-                                        <rect key="frame" x="0.0" y="64" width="207" height="23"/>
+                                        <rect key="frame" x="0.0" y="64" width="331" height="23"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lvo-O0-4EW">
-                                        <rect key="frame" x="0.0" y="121.5" width="207" height="206"/>
+                                        <rect key="frame" x="0.0" y="121.5" width="331" height="330"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="lvo-O0-4EW" secondAttribute="height" multiplier="1:1" id="vY3-js-mZv"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FH-Ag-mzj">
+                                        <rect key="frame" x="0.0" y="486" width="331" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Update Image..."/>
+                                        <connections>
+                                            <action selector="updateImage" destination="AxH-BA-2Gp" eventType="touchUpInside" id="UbH-EJ-tyx"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -93,7 +101,7 @@
                         <constraints>
                             <constraint firstItem="AnB-5k-ixS" firstAttribute="centerX" secondItem="LOb-fd-jfA" secondAttribute="centerX" id="Ake-LJ-3pN"/>
                             <constraint firstItem="AnB-5k-ixS" firstAttribute="centerY" secondItem="LOb-fd-jfA" secondAttribute="centerY" id="HZO-1p-YhG"/>
-                            <constraint firstItem="AnB-5k-ixS" firstAttribute="width" secondItem="LOb-fd-jfA" secondAttribute="width" multiplier="0.5" id="KiN-Ny-grY"/>
+                            <constraint firstItem="AnB-5k-ixS" firstAttribute="width" secondItem="LOb-fd-jfA" secondAttribute="width" multiplier="0.8" id="KiN-Ny-grY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="waX-IF-K55"/>
